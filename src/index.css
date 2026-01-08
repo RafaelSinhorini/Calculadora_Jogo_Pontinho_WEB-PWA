@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --poker-green: #1a472a;
+}
+
+body {
+  background-color: var(--poker-green);
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
