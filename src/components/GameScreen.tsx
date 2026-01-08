@@ -45,7 +45,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ players, rounds, onCalculate, o
   const indexColWidthClass = "min-w-[40px]";
 
   return (
-    <div className="w-full h-screen flex flex-col pb-4 animate-in fade-in duration-500 overflow-hidden">
+    <div className="w-screen max-w-[100vw] min-h-[100dvh] flex flex-col justify-between pb-4 animate-in fade-in duration-500 overflow-x-hidden">
       <div className="flex justify-between items-center py-4 px-2 shrink-0">
         <button 
           onClick={onBack}

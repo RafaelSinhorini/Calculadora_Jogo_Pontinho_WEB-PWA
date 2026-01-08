@@ -18,7 +18,7 @@ const WinnerModal: React.FC<WinnerModalProps> = ({ winner, onRestart, onNewPlaye
         <div className="absolute bottom-1/3 right-1/3 animate-ping text-4xl opacity-50">✨</div>
       </div>
 
-      <div className="bg-white rounded-[2.5rem] p-8 w-full max-w-sm text-center shadow-[0_0_80px_rgba(253,224,71,0.4)] border-8 border-yellow-400 relative animate-in zoom-in-90 duration-500">
+      <div className="bg-white rounded-[2.5rem] p-10 w-[90%] max-w-xl text-center shadow-[0_0_80px_rgba(253,224,71,0.4)] border-8 border-yellow-400 relative animate-in zoom-in-90 duration-500">
         <div className="relative mb-10 flex justify-center">
           <div className="text-8xl drop-shadow-2xl animate-bounce">🏆</div>
           <div className="absolute -top-4 -right-2 text-4xl animate-pulse">🎊</div>

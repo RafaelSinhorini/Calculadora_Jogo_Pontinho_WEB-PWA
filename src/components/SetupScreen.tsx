@@ -29,7 +29,7 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStart }) => {
   };
 
   return (
-    <div className="w-full flex-1 flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div className="w-screen max-w-[100vw] min-h-[100dvh] flex flex-col justify-between items-center animate-in fade-in slide-in-from-bottom-4 duration-700 overflow-x-hidden">
       <div className="mt-8 mb-6 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
           <svg className="w-12 h-12 text-yellow-400 drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor">
@@ -42,7 +42,7 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStart }) => {
         <p className="text-sm text-green-200 font-medium">Divirta-se jogando cartas!</p>
       </div>
 
-      <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 w-full shadow-2xl border border-white/20 mb-8">
+      <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 w-[80%] max-w-[500px] shadow-2xl border border-white/20 mb-8">
         <label className="text-center block text-lg font-bold text-white mb-4 uppercase tracking-wide">
           Quantidade de Jogadores
         </label>
@@ -72,7 +72,7 @@ const SetupScreen: React.FC<SetupScreenProps> = ({ onStart }) => {
 
       <button
         onClick={handlePlay}
-        className="w-full bg-yellow-400 hover:bg-yellow-500 active:scale-[0.98] py-4 rounded-2xl text-green-900 font-black text-xl uppercase tracking-widest shadow-[0_6px_0_rgb(202,138,4)] transition-all mb-10"
+        className="w-[70%] max-w-[500px] bg-yellow-400 hover:bg-yellow-500 active:scale-[0.98] py-4 rounded-2xl text-green-900 font-black text-xl uppercase tracking-widest shadow-[0_6px_0_rgb(202,138,4)] transition-all mb-10"
       >
         Jogar
       </button>
