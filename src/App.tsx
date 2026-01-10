@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { View, Player, Round } from './types.ts';
 import SetupScreen from './components/SetupScreen.tsx';
 import GameScreen from './components/GameScreen.tsx';
+import InstrucoesScreen from './components/InstrucoesScreen.tsx';
 import WinnerModal from './components/WinnerModal.tsx';
 
 const App: React.FC = () => {
@@ -91,18 +92,31 @@ const App: React.FC = () => {
     setWinner(null);
   };
 
+  const goToInstructions = () => {
+  setView('instructions');
+};
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-start p-4 max-w-md mx-auto w-full">
-      {view === 'setup' ? (
-        <SetupScreen onStart={startGame} />
-      ) : (
-        <GameScreen 
-          players={players} 
-          rounds={rounds} 
-          onCalculate={handleCalculateRound} 
-          onBack={goToSetup}
-        />
-      )}
+      {view === 'setup' && (
+  <SetupScreen onStart={startGame}
+  onInstructions={goToInstructions}
+   />
+)}
+
+{view === 'instructions' && (
+  <InstrucoesScreen onBack={goToSetup} />
+)}
+
+{view === 'game' && (
+    <GameScreen 
+      players={players} 
+      rounds={rounds} 
+      onCalculate={handleCalculateRound} 
+      onBack={goToSetup}
+    />
+  )}
+
       
       {winner && (
         <WinnerModal 
