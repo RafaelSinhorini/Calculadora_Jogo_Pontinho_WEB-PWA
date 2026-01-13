@@ -92,11 +92,25 @@ const GameScreen: React.FC<GameScreenProps> = ({ players, rounds, onCalculate, o
                 <span className="text-sm font-black text-white uppercase truncate w-full text-center">
                   {p.name}
                 </span>
+
+                <div className="flex items-center gap-1 min-h-[28px] mt-1">
+                  {p.explosionCount > 0 && (
+                    <div
+                      className={`flex items-center bg-red-600/40 px-2 py-0.5 rounded-xl border border-white/20 ${
+                        p.lastExploded ? 'animate-bounce' : ''
+                      }`}
+                    >
+                      <span className="text-base">💣</span>
+                      <span className="text-xs font-black text-white ml-1">
+                        x{p.explosionCount}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
-          </div>
-
-          {/* RODADAS */}
+           
+          </div>{/* RODADAS */}
           <div ref={tableContainerRef} className="flex-grow overflow-y-auto custom-scrollbar">
             {rounds.map((round, rIdx) => (
               <div key={rIdx} className="flex border-b border-white/5 hover:bg-white/5 transition-colors">

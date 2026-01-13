@@ -26,14 +26,14 @@ const WinnerModal: React.FC<WinnerModalProps> = ({ winner, onRestart, onNewPlaye
         </div>
         
         <h3 className="text-gray-400 font-bold uppercase tracking-[0.2em] text-sm mb-2">
-          Grande Vencedor
+          Ganhador:
         </h3>
         <h2 className="text-4xl font-black text-green-900 font-fun uppercase tracking-tight mb-4 break-words">
           {winner.name}
         </h2>
         
         <div className="bg-green-100 text-green-700 font-black py-3 px-8 rounded-2xl inline-block text-2xl uppercase tracking-widest mb-8 border-b-4 border-green-200">
-          Campeão!
+          VENCEU A PARTIDA!
         </div>
         
         <p className="text-gray-500 font-semibold mb-8 px-4 leading-tight">
